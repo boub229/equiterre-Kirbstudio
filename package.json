@@ -8,5 +8,11 @@
   },
   "devDependencies": {
     "vite": "^2.5.4"
+  },
+  "dependencies": {
+    "gsap": "^3.7.1",
+    "lodash": "^4.17.21",
+    "sass": "^1.42.1",
+    "swiper": "^7.0.6"
   }
 }
