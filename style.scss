@@ -2,7 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap');
 
+*{
+  box-sizing: border-box;
+}
 
+body{
+  background-color: #293F14; 
+}
+a{
+  text-decoration: none;
+}
 
 .container-fluid{
   background-color: #293F14;
@@ -13,6 +22,7 @@
   height: 130px;
   padding: 30px;
 }
+
 .nav{
   display: flex;
   justify-content: space-evenly;
@@ -21,15 +31,24 @@
   align-items: center;
   justify-content: center;
   font-family: Montserrat;
+  
 }
 
 .nav-link{
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
   align-items: center;
   color: white;
+  
 }
-
+.nav-link:hover{
+  text-decoration-color: white;
+  text-decoration: underline;
+  color: white;
+}
+.navbar-toggler{
+  background-color: white;
+}
 button{
   border: none;
   color: white;
@@ -43,6 +62,24 @@ button{
   background-color: #4ea5d9;
 }
 .button-langue{
+  background-color: white;
+  color: black;
+}
+.button-langue:hover{
+  text-decoration-color: black;
+  text-decoration: underline;
+  color: black;
+}
+footer{
+  width: 100%;
+  height: 300px;
   background-color: #4ea5d9;
 }
+.logo-footer{
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: 130px;
+}
+
 
