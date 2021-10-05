@@ -38,7 +38,7 @@ a{
 
 .nav-link{
   display: flex;
-  font-size: 15px;
+  font-size: 16px;
   align-items: center;
   color: white;
   
@@ -179,4 +179,24 @@ footer .container-fluid{
   width: 100%;
   height: auto;
   overflow: hidden;
+}
+
+
+@media screen and (max-width: 978px){
+  .navbar-collapse{
+    position: absolute;
+    left:100%;
+    top: 100px;
+  
+   &.show{
+     transform: translate(-100%);
+   }
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .nav-link{
+    font-size:13px;
+  }
 }
