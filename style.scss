@@ -70,7 +70,7 @@ button{
   text-decoration: underline;
   color: black;
 }
-footer{
+footer .container-fluid{
   position: absolute;
   z-index: 3;
   width: 100%;
@@ -78,14 +78,12 @@ footer{
   background-color: #4ea5d9;
   color: white;
 }
-
-
 .logo-footer{
  position: absolute;
   display: flex;
   justify-content: center;
   width: auto;
-  height: 100px;
+  height: 105px;
   z-index: 3;
 }
 .a-footer{
@@ -93,20 +91,112 @@ footer{
   color: white;
 
 }
-
 .colonne1{
   display: flex;
-  height: auto;
-  justify-content: center;
-}
+  justify-content: space-evenly;
+  height: 300px;
 
+}
+.colonne1 a.reseau-footer{
+  max-height: 150px;
+  display: flex;
+  align-items: flex-end;
+}
+.colonne1 .logo-footer img{
+  height: 100px;
+  display: flex;
+}
 .colonne2{
- height: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  max-height: 300px;
+}
+.colonne2 .a-footer{
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  z-index: 3;
+}
+.colonne2 .button-don{
+  background-color:#293F14;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.colonne2 .p-footer{
+  position: absolute;
+  padding: 10px;
+  color: white;
+}
+.colonne2 .p-footer:hover{
+  text-decoration: underline;
+}
+.colonne2 a.p-footer{
+  z-index:5;
+}
+#text-footer{
+  height: 300px;
   display: flex;
   justify-content: center;
 }
+.colonne2 p{
+  height: 350px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 
+}
+.colonne2 button{
+  max-height: 90px;
+  z-index: 5;
+}
 .reseaux_sociaux{
-  height: 5%;
+  height: 30%;
   border-radius: 50%;
+}
+.colonne1 .partenaire-footer{
+  position:absolute;
+  transform: scale(0.5);
+
+}
+.colonne1 a.partenaire-footer{
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 5;
+}
+.colonne1 .partenaire2-footer{
+  position:absolute;
+  transform: scale(1);
+
+}
+.colonne1 a.partenaire2-footer{
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 4;
+}
+.copyright{
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  padding: 8px;
+}
+@media screen and (max-width: 576px) { 
+  footer .container-fluid { 
+    height: 660px;
+   }
+  .colonne2{
+    padding: 60px;
+  }
+}
+.hero-img{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
