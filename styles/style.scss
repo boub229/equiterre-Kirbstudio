@@ -174,21 +174,16 @@ footer .container-fluid{
   padding: 8px;
 }
 
-.hero-img{
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
 
 @media screen and (max-width: 990px){
   .navbar-collapse{
     position: absolute;
     left:100%;
     top: 100px;
-    width:170px;
+    width:100px;
     height:450px;
     display: flex;
+    
     background-color: #293F14;
     padding: 10px;
   
