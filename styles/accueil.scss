@@ -1,16 +1,14 @@
-body{
-    overflow:hidden;
-}
 
   .swiper-container {
     width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .swiper-slide {
     background-size: cover;
-    background-position: 50%;
     min-height: 80vh;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,16 +18,62 @@ body{
 
  .swiper-pagination {
   &-bullet {
+    
       background-color: transparent;
-      border: 2px solid #fff;
+      border: none;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      width: 15px !important;
+      height: 15px !important;
+      background-color: #D6D6B1 !important;
       opacity: 1;
+      
   }
 
   &-bullet-active {
-      background-color: #fff;
+    background-color:#4EA5D9 !important;
   }
 }
 
+
+.swiper-button-next{
+    color: white !important;
+}
+
+.swiper-button-prev{
+    color: white !important;
+}
+
+
+.titre_articles{
+    position: relative;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.description_articles{
+    position: relative;
+    font-size:25px;
+    color:white;
+    text-align: center;
+    font-family: Source Sans pro;
+}
+
+.button-savoir-plus{
+    background-color: #4ea5d9;
+    position: relative;
+    text-align: center;
+    width:300px;
+    height:80px;
+    margin-top:50px;
+    font-size:25px;
+    font-family: Source Sans pro;
+}
+
+.img-swiper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
