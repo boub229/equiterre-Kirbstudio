@@ -54,11 +54,24 @@
     text-align: center;
     font-family: Montserrat;
 }
-
+.titre_articles_noir{
+    position: relative;
+    color:black;
+    font-size: 70px;
+    text-align: center;
+    font-family: Montserrat;
+}
 .description_articles{
     position: relative;
     font-size:25px;
     color:white;
+    text-align: center;
+    font-family: Source Sans pro;
+}
+.description_articles_noir{
+    position: relative;
+    font-size:25px;
+    color:black;
     text-align: center;
     font-family: Source Sans pro;
 }
@@ -93,15 +106,18 @@
 
 .service1{
     padding-left:20px;
-    background-color: #F47B28;
+    background-image:url("sources/médias/Accueil/geste1.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
     opacity: 60%;
 }
+.img_cartes{
+    
+}
 .service2{
     padding-left:20px;
-    background-color: #4EA5D9;
+    background-image:url("sources/médias/Accueil/geste2.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
@@ -109,7 +125,7 @@
 }
 .service3{
     padding-left:20px;
-    background-color: #FF206E;
+    background-image:url("sources/médias/Accueil/geste3.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
