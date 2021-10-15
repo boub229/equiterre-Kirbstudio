@@ -110,34 +110,38 @@
     height: 425px;
     width:25%;
     padding-bottom: 20px;
+    position: relative;
 }
 .color-1{
     background-color: #F47B28;
     height: 425px;
     width:100%;
-    padding-left:20px;
     opacity: 40%;
+    position: absolute;
 }
 .service2{
     background-image:url("sources/médias/Accueil/geste2.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
+    position: relative;
 }
 .color-2{
     background-color: #4EA5D9;
     height: 425px;
     width:100%;
-    padding-left:20px;
     opacity: 40%;
+    position: absolute;
 }
 .service3{
     background-image:url("sources/médias/Accueil/geste3.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
+    position: relative;
 }
 .color-3{
+    position: absolute;
     background-color: #FF206E;
     height: 425px;
     width:100%;
@@ -150,5 +154,18 @@
     color: white;
     top: 300px;
     opacity: 100%;
-    z-index: 5;
+    padding-left:20px;
+}
+
+.img-témoignages{
+    width: 80%;
+    padding-left:200px;
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+.text_témoignages{
+    color: white;
+    font-size: 1.8vw;
+    padding:60px;
 }
