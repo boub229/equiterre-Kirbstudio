@@ -1,3 +1,4 @@
+@import './styles/variables.scss';
 
   .swiper-container {
     width: 100%;
@@ -105,34 +106,49 @@
 }
 
 .service1{
-    padding-left:20px;
-    background-color: #F47B28;
+    background-image:url("sources/médias/Accueil/geste1.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
-    opacity: 50%;
+}
+.color-1{
+    background-color: #F47B28;
+    height: 425px;
+    width:100%;
+    padding-left:20px;
+    opacity: 40%;
 }
 .service2{
-    padding-left:20px;
     background-image:url("sources/médias/Accueil/geste2.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
-    opacity: 60%;
+}
+.color-2{
+    background-color: #4EA5D9;
+    height: 425px;
+    width:100%;
+    padding-left:20px;
+    opacity: 40%;
 }
 .service3{
-    padding-left:20px;
     background-image:url("sources/médias/Accueil/geste3.jpg");
     height: 425px;
     width:25%;
     padding-bottom: 20px;
-    opacity: 60%;
 }
-
+.color-3{
+    background-color: #FF206E;
+    height: 425px;
+    width:100%;
+    padding-left:20px;
+    opacity: 40%;
+}
 .text_cartes{
     position: relative;
     font-size:30px;
     color: white;
     top: 300px;
     opacity: 100%;
+    z-index: 5;
 }
