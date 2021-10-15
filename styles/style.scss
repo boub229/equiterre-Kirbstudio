@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #293F14; 
+}
+a{
+  text-decoration: none;
+}
+.navbar{
+  padding: 0;
+}
+.container-fluid{
+  background-color: #293F14;
+}
+.navbar-brand{
+  display: flex;
+  width: auto;
+  height: 130px;
+  padding: 30px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  
+}
+
+.nav-link{
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  color: white;
+  
+}
+.nav-link:hover{
+  text-decoration-color: white;
+  text-decoration: underline;
+  color: white;
+}
+.navbar-toggler{
+  background-color: white;
+}
+button{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0000;
+}
+.button-don{
+  background-color: #4ea5d9;
+}
+.button-langue{
+  background-color: white;
+  color: black;
+}
+.button-langue:hover{
+  text-decoration-color: black;
+  text-decoration: underline;
+  color: black;
+}
+footer .container-fluid{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  background-color: #4ea5d9;
+  color: white;
+}
+.logo-footer{
+ position: absolute;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 105px;
+  z-index: 3;
+}
+.a-footer{
+  color: white;
+  text-align: center;
+}
+.colonne1{
+  display: flex;
+  justify-content: space-evenly;
+  height: 300px;
+
+}
+.colonne1 a.reseau-footer{
+  max-height: 150px;
+  display: flex;
+  align-items: flex-end;
+}
+.colonne1 .logo-footer img{
+  height: 100px;
+  display: flex;
+}
+.colonne2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.colonne2 .a-footer{
+  padding: 10px;
+  z-index: 3;
+}
+.colonne2 .button-don{
+  display: inline-block;
+  background-color:#293F14;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.colonne2 .p-footer{
+  color: white;
+}
+.colonne2 .p-footer:hover{
+  text-decoration: underline;
+}
+.colonne2 a.p-footer{
+  z-index:5;
+}
+
+.colonne2 p{
+  text-align: center;
+  padding: 10px;
+
+}
+.colonne2 button{
+  max-height: 90px;
+  z-index: 5;
+}
+.reseaux_sociaux{
+  height: 30%;
+  border-radius: 50%;
+}
+.colonne1 .partenaire-footer{
+  position:absolute;
+  transform: scale(0.5);
+
+}
+.colonne1 a.partenaire-footer{
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 5;
+}
+.colonne1 .partenaire2-footer{
+  position:absolute;
+  transform: scale(1);
+
+}
+.colonne1 a.partenaire2-footer{
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 4;
+}
+.copyright{
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  padding: 8px;
+}
+
+
+@media screen and (max-width: 990px){
+  .navbar-collapse{
+    position: absolute;
+    left:100%;
+    top: 100px;
+    width:100px;
+    height:450px;
+    display: flex;
+    
+    background-color: #293F14;
+    padding: 10px;
+  
+   &.show{
+     transform: translate(-100%);
+   }
+  }
+
+  .nav-item{
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link{
+    display: block;
+    
+  }
+}
+
+  
+
+@media screen and (min-width: 1050px){
+  .nav-link{
+    font-size: 16px;
+  }
+}

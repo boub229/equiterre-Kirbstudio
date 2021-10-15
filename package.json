@@ -10,7 +10,10 @@
     "vite": "^2.5.4"
   },
   "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.1",
     "gsap": "^3.7.1",
+    "jquerry": "0.0.1-security",
     "lodash": "^4.17.21",
     "sass": "^1.42.1",
     "swiper": "^7.0.6"
