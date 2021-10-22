@@ -40,3 +40,13 @@ const hover = gsap.to(hamburger, {
 
 hamburger.addEventListener("mouseenter", () => hover.play());
 hamburger.addEventListener("mouseleave", () => hover.reverse());
+
+const play = document.querySelector('.btn-don');
+
+play.addEventListener('click', function() {
+  gsap.timeline()
+    .fromTo('.btn-don', {scale: 1.1, duration: 0.3, backgroundColor: 'white', ease: "ease-in-out"},
+                        {scale: 1, backgroundColor: 'white', ease: "ease-in-out"})
+    .to('.text-don', {scale: 1, duration: 0.1, color: '#4EA5D9', ease: "ease-in-out"},)
+});
+

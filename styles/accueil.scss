@@ -200,3 +200,26 @@
   h1{
       padding: 100px;
   }
+
+  .container-don{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;;
+  }
+  .btn-don{
+    background-color: #4ea5d9;
+    position: relative;
+    text-align: center;
+    width:350px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .text-don{
+    font-size: 45px;
+    font-family: Source Sans pro;
+    color: white;
+  }
