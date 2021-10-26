@@ -157,6 +157,59 @@
     padding-left:20px;
 }
 
+@media screen and (min-width: 1200px){
+    .bloc_services{
+      flex-direction: row;
+    }
+    .service3{
+        display: block !important;
+        width: 25% !important;
+    }
+    .service1{
+        width: 25% !important;
+    }
+    .service2{
+        width: 25% !important;
+    }
+  }
+
+@media screen and (min-width: 768px){
+    .service3{
+      display: none;
+    }
+    .service1{
+        width: 40%;
+    }
+    .service2{
+        width: 40%;
+    }
+    .bloc_services{
+        flex-direction: row !important;
+    }
+  }
+
+@media screen and (min-width: 375px){
+    .service3{
+        background-image:url("sources/médias/Accueil/geste3.jpg");
+        height: 425px;
+        width: 40%;
+        margin: 20px;
+        position: relative;
+        visibility: visible;
+    }
+    .service1{
+        margin: 20px;
+        width: 40%;
+    }
+    .service2{
+        margin: 20px;
+        width: 40%;
+    }
+    .bloc_services{
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 1000px){
     .text_cartes{
       font-size: 3vw;
