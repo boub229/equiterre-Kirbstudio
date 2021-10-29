@@ -30,3 +30,88 @@
     background-color: #F47B28;
     opacity: 40%;
 }
+
+.cartes_nouvelles{
+    position: relative;
+    display:flex;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cartes{
+    position: relative;
+    width:30vw;
+    height: 40vw;
+    margin: 10px;
+    overflow: hidden;
+    
+}
+
+
+.img-nouvelles-détail{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.titre_cartes h2{
+    font-size: 2.5vw;
+    position: absolute;
+    z-index: 2;
+    color:white;
+    margin: 10px;
+
+}
+
+
+.opacity_détail{
+    width: 100%;
+    height: 100%;
+    background-color: #184864;
+    opacity: 40%;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+.opacity_détail1{
+    width: 100%;
+    height: 100%;
+    background-color: #e23d77;
+    opacity: 40%;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+.opacity_détail1:hover{
+    background-color: #fa0057;;
+    opacity: 40%;
+   
+    
+}
+
+.titre_cartes1 h2{
+    font-size: 2.5vw;
+    position: absolute;
+    z-index: 2;
+    color:rgb(0, 0, 0);
+    margin: 10px;
+
+}
+
+.opacity_détail:hover{
+    background-color: #1e98df;
+    opacity: 40%;
+
+}
+
+.bouton_nouvelles{
+    width: 30%;
+    height: 60px;
+    margin: 20px;
+    text-align: center;
+    background-color: #4ea5d9;
+}
