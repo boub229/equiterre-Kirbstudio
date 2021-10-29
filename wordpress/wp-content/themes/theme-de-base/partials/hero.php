@@ -1,1 +1,0 @@
-<img class="fruit" src="/sources/médias/détail_nouvelles/fruit.jpg" >
