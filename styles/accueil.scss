@@ -95,6 +95,13 @@
     height: 100%;
     object-fit: cover;
 }
+.opacity{
+    background-color: #584B53;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
 @media screen and (min-width: 375px){
     .description_articles{
@@ -286,6 +293,7 @@
 @media screen and (min-width: 1000px){
     .text_témoignages{
       font-size: 40px;
+      text-align: center;
     }
   }
 
