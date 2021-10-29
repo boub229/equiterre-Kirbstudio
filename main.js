@@ -50,3 +50,12 @@ play.addEventListener('click', function() {
     .to('.text-don', {scale: 1, duration: 0.1, color: '#4EA5D9', ease: "ease-in-out"},)
 });
 
+const animation = gsap.timeline({
+  defaults: { 
+    y: '400%',
+    ease: 'back'
+  }
+})
+  .from('.arbret1', {})
+.from('.arbret2', {})
+ ;
