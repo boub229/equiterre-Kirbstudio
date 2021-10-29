@@ -16,23 +16,20 @@
     padding: 30px;
     
 }
-.image_détail_nouvelle img{
+.image_détail_nouvelle{
     width: 100%;
     height: 100%;
+    position: relative;
 }
 .titre_détail_nouvelle h2{
     font-size: 5vw;
     color: white;
 }
-.image_détail_nouvelle .opacity{
+.image_détail_nouvelle .opacity_hero_détail{
     width: 100%;
     height: 100%;
     background-color: #F47B28;
     opacity: 40%;
-}
-.img-nouvelles-détail{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     position: absolute;
+    overflow: hidden;
 }
