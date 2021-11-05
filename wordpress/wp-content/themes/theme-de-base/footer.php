@@ -34,9 +34,7 @@
 
 </footer>
 <style>
-img{
-width: 100% !important;  
-}
+
 
 </style>
 

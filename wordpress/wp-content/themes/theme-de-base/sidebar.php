@@ -8,9 +8,7 @@ if ( ! dynamic_sidebar( 'barre-laterale-principale' ) ) :
 	/* Si dans le tableau de bord rien n'a été mis dans la barre latérale, afficher ceci */ ?>
 	<aside>
 		<h3>
-			<?php 
-				_e( 'Archives', 'Archive dans la barre latérale' ); // Titre des archives  
-			?>
+		
 		</h3>
 
 		<ul>
