@@ -11,12 +11,12 @@
       <div class="container-fluid">
           <div class="row">
               <div class="col-sm-6 col-xs-12 text-center text-sm-start colonne1">
-                <a class="logo-footer" href="index.html"><img src="/sources/maquettes_graphiques/medias/logo.PNG"></a>
-                <a class="reseau-footer" href="https://www.facebook.com/equiterre/"><img  class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?> /medias/Acceuil/fb2.png"></a>
-                <a class="reseau-footer" href="https://www.instagram.com/equiterre_ong/?hl=fr-ca"><img  class="reseaux_sociaux" src="/sources/maquettes_graphiques/medias/insta2.png"></a>
-                <a class="reseau-footer" href="https://twitter.com/equiterre?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="reseaux_sociaux" src="/sources/maquettes_graphiques/medias/twitter2.png"></a>
-                <a class="partenaire-footer" href="https://www.vireauvert.org/"><img src="/sources/maquettes_graphiques/medias/partenaire1.png"></a>
-                <a class="partenaire2-footer" href="https://uneplaneteunvote.ca/"><img src="/sources/maquettes_graphiques/medias/partenaire2.png"></a>
+                <a class="logo-footer" href="index.html"><img src="<?php echo get_template_directory_uri();?>/medias/logo.PNG"></a>
+                <a class="reseau-footer" href="https://www.facebook.com/equiterre/"><img  class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/fb2.png"></a>
+                <a class="reseau-footer" href="https://www.instagram.com/equiterre_ong/?hl=fr-ca"><img  class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/insta2.png"></a>
+                <a class="reseau-footer" href="https://twitter.com/equiterre?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/twitter2.png"></a>
+                <a class="partenaire-footer" href="https://www.vireauvert.org/"><img src="<?php echo get_template_directory_uri();?>/medias/partenaire1.png"></a>
+                <a class="partenaire2-footer" href="https://uneplaneteunvote.ca/"><img src="<?php echo get_template_directory_uri();?>/medias/partenaire2.png"></a>
                 <p class="copyright">© Équiterre KirbStudio</p>
               </div>
               <div class="col-sm-6 col-xs-12 text-center colonne2">
@@ -33,7 +33,12 @@
       </div>
 
 </footer>
+<style>
+img{
+width: 100% !important;  
+}
 
+</style>
 
 <?php wp_footer(); 
 /* Espace où WordPress peut insérer des fichiers .js et autres. Par exemple pour des extensions (plugins). 
