@@ -33,6 +33,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       </div>
     </div>
   </section>
+
+  
 	</article>
 <?php endwhile; // Fermeture de la boucle
 
