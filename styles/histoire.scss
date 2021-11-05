@@ -1,0 +1,43 @@
+.a-propos{
+    padding-top:40px;
+}
+.titre-liste{
+    color: white;
+    padding-left: 8%;
+}
+.a-porpos-liste{
+    color: white;
+}
+.a-propos-content{
+    color: white;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+@media screen and (max-width: 992px) {
+    .a-propos-content {
+      text-align: center;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    .titre-liste{
+      text-align: center; 
+      padding: 0; 
+    }
+  }
+.titre_détail_nouvelle{
+    font-size: 2vw;
+}
+.titre_détail_nouvelle h3{
+    font-size: 2vw;
+}
+@media screen and (max-width: 650px) {
+    .titre_détail_nouvelle h3{
+      display: none;
+    }
+    .a-porpos-liste{
+        display: none;
+    }
+  }
+.a-propos-container{
+    padding-top: 30px;
+}
