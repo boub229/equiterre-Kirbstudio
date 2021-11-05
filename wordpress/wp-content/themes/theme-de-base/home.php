@@ -1,6 +1,6 @@
 <?php 
 /**
- * 	Template Name: À propos
+ * 	Template Name: Accueil
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -19,6 +19,20 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<?php endif; ?>
 		
 		<?php the_content(); // Contenu principal de la page ?>
+		<section>
+    <h1>Témoignage</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6 col-sm-12 text-center">
+          <img class="img-témoignages" src="<?php the_field('temoignage_photo') ?>">
+        </div>
+
+        <div class="col-xl-6 col-sm-12 text-center text-sm-start text_témoignages">
+          <p><?php the_field('text_temoignage'); ?></p>
+        </div>
+      </div>
+    </div>
+  </section>
 	</article>
 <?php endwhile; // Fermeture de la boucle
 
