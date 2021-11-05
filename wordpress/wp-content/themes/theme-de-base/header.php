@@ -42,6 +42,7 @@
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
 			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
 		?>
+		
 	</nav>
 
 	<?php 
