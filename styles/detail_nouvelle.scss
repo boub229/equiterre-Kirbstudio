@@ -37,11 +37,39 @@
 .text_détail_nouvelles{
     color: white;
     font-size: 1.6vw;
-    padding:8%;
+    padding-left:8%;
+    padding-top:8%;
+    padding-right:8%;
 }
 
 @media screen and (max-width: 768px) {
     .text_détail_nouvelles {
       font-size: 2.2vw;
     }
+}
+
+.cartes-detail-nouvelle{
+    position: relative;
+    width:40vw;
+    height: 30vw;
+    margin: 10px;
+    overflow: hidden;
+    margin-left: 8%;
+}
+.detail-nouvelle-content{
+    color: white;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.flex-detail-nouvelle{
+    display: flex;
+}
+.titre-prochaine-nouvelle{
+    color: white;
+    margin-left: 8%;
+    margin-top: 6%;
+}
+.titre-prochaine-nouvelle h2{
+    font-size: 4vw;
 }
