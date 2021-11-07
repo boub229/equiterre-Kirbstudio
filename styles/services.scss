@@ -14,6 +14,14 @@
     overflow: hidden;
     
 }
+.cartes-detail-service{
+    position: relative;
+    width:40vw;
+    height: 30vw;
+    margin: 10px;
+    overflow: hidden;
+    margin-left: 8%;
+}
 .detail-service-content{
     color: white;
     padding-left: 8%;
@@ -21,4 +29,15 @@
 }
 .detail-service-container{
     padding-top: 2%;
+}
+.flex-detail-service{
+    display: flex;
+}
+.titre-prochain-service{
+    color: white;
+    margin-left: 8%;
+    margin-top: 6%;
+}
+.titre-prochain-service h2{
+    font-size: 4vw;
 }
