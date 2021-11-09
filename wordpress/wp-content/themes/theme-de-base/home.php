@@ -87,7 +87,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
-   
+
     </div>
     </section>
 
