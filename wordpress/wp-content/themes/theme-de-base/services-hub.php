@@ -64,7 +64,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 <div class='cartes2'>
   <div class="opacity_détail"></div>
   <div class="titre_cartes"><h2>   
-    Travailler sur une femme</h2>
+    Travailler sur une ferme</h2>
   </div>
   <img src="/sources/médias/détail_services/service5.jpg"  class='img-nouvelles-détail' alt="">
 </div>
@@ -86,6 +86,15 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	<style>
 		.img-nouvelles-détail{
 			position: relative;
+
+		}
+
+		.hero{
+			width:85%;
+			height: 100%;
+    		position: relative;
+    		margin-left: auto;
+    		margin-right: auto;
 		}
 
 		.cartes2 {
