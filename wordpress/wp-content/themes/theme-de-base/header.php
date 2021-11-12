@@ -65,15 +65,34 @@ button{
   display: inline-block;
   cursor: pointer;
   background-color: #0000;
-  width:100%;
+  margin:10px;
 }
 .button-don{
   background-color: #4ea5d9;
-  
+  width:auto;
+  margin:10px;
+  width:auto;
 }
 
+.button-langue{
+  background-color: white;
+  margin:10px;
+  text-align:center;
+}
 .nav-link{
-	display:block
+	display:block;
+	font-size:14px;
+}
+
+@media screen and (min-width: 976px){
+  .button-don{
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 992px){}
+.navbar-collapse { width:164px;
+
 }
 
 </style>
