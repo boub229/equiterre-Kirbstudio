@@ -9,6 +9,7 @@ get_header(); // Affiche header.php
 
 ?>
 
+
 	<article>
 		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
 			<h2>
@@ -17,6 +18,7 @@ get_header(); // Affiche header.php
 		<?php endif; ?>
 		
 		<?php the_content(); // Contenu principal de la page ?>
+   
 
 
 
@@ -90,23 +92,23 @@ get_header(); // Affiche header.php
 
   <section>
   <div class="bloc_services">
-      <div class="service1">
+  <?php
+  $services = new WP_Query('post_type=service');
+  while ($services->have_posts()) : $services->the_post(); 
+?>
+<div class="service1">
+        
+        <?php the_post_thumbnail('large'); // Vignette large du post ?>
         <div class="color-1">
         </div>
-        <p class="text_cartes">École ouverte</p>
+        <p class="text_cartes" ><?php the_title(); ?></p>
+        
       </div>
 
-      <div class="service2">
-        <div class="color-2">
-        </div>
-        <p class="text_cartes">Paniers bio</p>
-      </div>
-      <div class="service3">
-        <div class="color-3">
-        </div>
-        <p class="text_cartes">Épluche ta ville pour manger local</p>
-      </div>
-    </div>
+<?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
+    
   </section>
   <section>
     <h1>Témoignage</h1>
@@ -162,6 +164,26 @@ get_header(); // Affiche header.php
       width: 100%;
       height: 100%;
       text-align: center;
+    }
+
+    .service1 img{
+      top:0px;
+      right:0px;
+      position: absolute;
+      width:100%;
+      height:100%;
+    }
+
+    .service1:nth-child(1) .color-1{
+      background-color: #F47B28;
+    }
+
+    .service1:nth-child(2) .color-1{
+      background-color: #4EA5D9;
+    }
+
+    .service1:nth-child(3) .color-1{
+      background-color: #FF206E;
     }
 
 </style>
