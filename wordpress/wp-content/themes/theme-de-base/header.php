@@ -65,10 +65,15 @@ button{
   display: inline-block;
   cursor: pointer;
   background-color: #0000;
+  width:100%;
 }
 .button-don{
   background-color: #4ea5d9;
   
+}
+
+.nav-link{
+	display:block
 }
 
 </style>
