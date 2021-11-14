@@ -40,7 +40,7 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/wordpress"><img src="<?php echo get_template_directory_uri();?>/medias/logo.PNG"></a>
+        <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/medias/logo.PNG"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
