@@ -13,9 +13,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 	<article>
 		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
+
 		<?php endif; ?>
 		
 		<?php the_content(); // Contenu principal de la page ?>
@@ -28,61 +26,43 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <div class="titre_nouvelle">
               <h2>Nouvelles</h2>
             </div>
-            <img src="/sources/médias/détail_nouvelles/fruit.jpg" alt="">
+            <img src="<?php the_field('img_hero'); ?>" alt="">
           </div>
       </div>
   </div>
 
 <div class='cartes_nouvelles'>
-<div class='cartes'>
-  <div class="opacity_détail1"></div>
-  <div class="titre_cartes1"><h2>
-    CONFÉRENCE VEDETTE DE
-    2019 - OBSOLESCENCE :
-    QUEL RÔLE POUR LE
-    CONSOMMATEUR?</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle1.jpg"  class='img-nouvelles-détail' alt="">
+
+
+
+
+<?php
+      $nouvelles_arguments = array( // 👈 Tableau d'arguments
+        'post_type' => 'nouvelle',
+        'posts_per_page' => 6,
+        'orderBy' => 'date',
+        'order' => 'asc'
+      );
+  $Nouvelles = new WP_Query($nouvelles_arguments);
+  while ($Nouvelles->have_posts()) : $Nouvelles->the_post(); 
+?>
+
+
+  <div class="cartes">
+    <div class="opacity_détail"></div>
+    <?php the_post_thumbnail('large', ['class' => 'img-nouvelles-détail']); // Vignette large du post ?>
+    <h2 class="titre_cartes" ><?php the_title(); ?></h2>
+  
   
 </div>
-<div class='cartes'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    FAITES L'EXPÉRIENCE DE LA SEULE COURSE 100% ÉCORESPONSABLE!</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle2.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    LA CRISE DES PESTICIDES AU QUÉBEC : À QUAND LA TRANSPARENCE?</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle3.png"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    4 ACTIONS POUR SAUVER #NOTREHIVER !</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle4-1.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>   
-    GESTE DU MOIS DE FÉVRIER : CE 14 FÉVRIER... BOUDONS LA ROSE!</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle5-1.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    VULGARISATION SCIENTIFIQUE, CHANGEMENTS CLIMATIQUES ET ALIMENTATION EN ARCTIQUE : LA 9E BOURSE LAURE WARIDEL DÉCERNÉE À MARIANNE FALARDEAU-CÔTÉ</h2>
-  </div>
-  <img src="/sources/médias/détail_nouvelles/nouvelle6-1.jpg"  class='img-nouvelles-détail' alt="">
-</div>
+
+
+<?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
+
 <button class='bouton_nouvelles'>Voir plus de nouvelles</button>
 </div>
-
 </section>
 	</article>
 <?php endwhile; // Fermeture de la boucle
@@ -94,3 +74,27 @@ endif;
 get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>
+
+<style>
+
+.titre_cartes{
+  z-index: 4;
+  position: relative;
+  color:white;
+}
+.opacity_détail{
+  width: 100%;
+    height: 100%;
+    opacity: 40%;
+    background-color: #184864;
+    position: absolute;
+    z-index: 2;
+    }
+
+    .cartes:nth-child(1) .opacity_détail{
+      background-color: #e23d77;
+    }
+
+  
+
+</style>
