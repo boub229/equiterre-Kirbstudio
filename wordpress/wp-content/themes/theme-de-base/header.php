@@ -84,11 +84,7 @@ button{
 	font-size:14px;
 }
 
-@media screen and (min-width: 976px){
-  .button-don{
-    width: 10%;
-  }
-}
+
 
 @media screen and (max-width: 992px){}
 .navbar-collapse { width:164px;
