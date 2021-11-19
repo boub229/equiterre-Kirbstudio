@@ -93,6 +93,7 @@ get_header(); // Affiche header.php
   <section>
   <div class="bloc_services">
   <?php
+  
   $services = new WP_Query('post_type=service');
   while ($services->have_posts()) : $services->the_post(); 
 ?>
@@ -121,7 +122,8 @@ wp_reset_postdata();
         </div>
 
         <div class="col-xl-6 col-sm-12 text-center text-sm-start text_témoignages">
-          <p><?php the_field('text_temoignage'); ?> </p>
+          <p>D’ici 2050, Équiterre aura contribué à l’émergence de solutions sur le terrain, à la transformation des normes sociales et à l’adoption de politiques publiques permettant de concrétiser de nouvelles façons de se nourrir,
+           produire, consommer et se déplacer qui sont sobres en carbone, compatibles avec les écosystèmes et la justice sociale, et conçues à l’échelle de nos territoires et de leurs communautés. </p>
         </div>
       </div>
     </div>
@@ -131,7 +133,13 @@ wp_reset_postdata();
   <div class="container-fluid">
     <div class="row">
       <?php
-  $Nouvelles = new WP_Query('post_type=Nouvelle');
+      $nouvelles_arguments = array( // 👈 Tableau d'arguments
+        'post_type' => 'nouvelle',
+        'posts_per_page' => 3,
+        'orderBy' => 'date',
+        'order' => 'asc'
+      );
+  $Nouvelles = new WP_Query($nouvelles_arguments);
   while ($Nouvelles->have_posts()) : $Nouvelles->the_post(); 
 ?>
 <div class="col-lg-4 col-sm-12 text-center">

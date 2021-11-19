@@ -20,7 +20,7 @@
                 <p class="copyright">© Équiterre KirbStudio</p>
               </div>
               <div class="col-sm-6 col-xs-12 text-center colonne2">
-                <a class="button-don" href="don.html">Faites un don!</a>
+                <a class="button-don" href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/?_ga=2.86176735.613308119.1637355142-258796891.1637355142">Faites un don!</a>
                 <p class="p-footer" id="text-footer">
                   Téléphone: 514-522-2000 <br>
                   <br>
