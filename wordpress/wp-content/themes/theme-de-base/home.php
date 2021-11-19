@@ -116,7 +116,7 @@ wp_reset_postdata();
       <div class="row">
         <div class="col-xl-6 col-sm-12 text-center">
           <div class="img-témoignages">
-          <?php echo get_the_post_thumbnail();?>
+          <img src="<?php echo get_template_directory_uri();?>/img/Accueil/personne_témoignages.jpg">
           </div>
         </div>
 
@@ -130,25 +130,29 @@ wp_reset_postdata();
   <h1>Nouveautés</h1>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4 col-sm-12 text-center">
-        <img class="img-nouvelles" src="sources/médias/détail_nouvelles/nouvelle1.jpg">
-        <h2 class="text-nouvelles">Conférence vedette de 2019 - Obsolescence : quel rôle pour le consommateur</h2>
+      <?php
+  $Nouvelles = new WP_Query('post_type=Nouvelle');
+  while ($Nouvelles->have_posts()) : $Nouvelles->the_post(); 
+?>
+<div class="col-lg-4 col-sm-12 text-center">
+  <div class="img-nouvelles">
+    </div>
+        
+        <?php the_post_thumbnail('large'); // Vignette large du post ?>
+        <p class="text-nouvelles" ><?php the_title(); ?></p>
         <button class="button-savoir-plus">En savoir plus</button>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center">
-        <img class="img-nouvelles" src="sources/médias/détail_nouvelles/nouvelle2.jpg">
-        <h2 class="text-nouvelles">Les péripéties d'un fermier de famille : un livre à savourer dès maintenant</h2>
-        <button class="button-savoir-plus">En savoir plus</button>
-      </div>
-      <div class="col-lg-4 col-sm-12 text-center">
-        <img class="img-nouvelles" src="sources/médias/détail_nouvelles/nouvelle3.png">
-        <h2 class="text-nouvelles">Des fermiers d'excellence dans notre réseau!<br> ㅤ</h2>
-        <button class="button-savoir-plus">En savoir plus</button>
+        </div>
+     
+
+<?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
+
+        
         
       </div>
-
-    </div>
-  </div>
+        
+      </div>
 </section>
 <section>
   <h1>Dons</h1>
@@ -186,6 +190,7 @@ wp_reset_postdata();
       background-color: #FF206E;
     }
 
+    
 </style>
 
 <?php 
