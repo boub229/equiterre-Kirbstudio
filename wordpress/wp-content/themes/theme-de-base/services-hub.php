@@ -1,6 +1,7 @@
 <?php 
 /**
  * 	Template Name: Services
+ * * Template Post Type: post, page, services
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -18,23 +19,24 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		
 		<?php the_content(); // Contenu principal de la page ?>
 		<section id='services'>
-  <div class="hero">
+    <div class="hero">
       <div class="fruit">
           <div class="image_nouvelle">
           <div class="opacity"></div>
             <div class="titre_nouvelle">
-              <h2>Services</h2>
+            <h2> <?php the_field('titre_des_pages'); ?> </h2>
             </div>
-            <img src="<?php echo get_template_directory_uri();?>/img/détail_services/1.jpg" alt="">
+            <img src="<?php the_field('img_hero'); ?>" alt="">
           </div>
       </div>
   </div>
 
 <div class='cartes_services'>
+  
 <div class='cartes2'>
   <div class="opacity_détail1"></div>
-  <div class="titre_cartes1"><h2>
-    École ouverte</h2>
+  <div class="titre_cartes1">
+    <h2>École ouverte</h2>
   </div>
   <img  src="<?php echo get_template_directory_uri();?>/img/détail_services/service1.png" class='img-nouvelles-détail' >
 </div>

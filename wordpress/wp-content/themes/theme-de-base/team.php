@@ -1,6 +1,7 @@
 <?php 
 /**
  * 	Template Name: Équipe
+ * Template Post Type: post, page, membres_equipes, membres_equipes_admins
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -18,65 +19,71 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		
 		<?php the_content(); // Contenu principal de la page ?>
 		<section id='équipe'>
-  <div class="hero">
-    <div class="fruit">
-        <div class="image_nouvelle">
-        <div class="opacity"></div>
-          <div class="titre_nouvelle">
-            <h2>Équipe</h2>
+    <div class="hero">
+      <div class="fruit">
+          <div class="image_nouvelle">
+          <div class="opacity"></div>
+            <div class="titre_nouvelle">
+             <h2> <?php the_field('titre_des_pages'); ?> </h2>
+             <h3> <?php the_field('composante_de_description_de_base_1'); ?> </h3>
+            </div>
+            <img src="<?php the_field('img_hero'); ?>" alt="">
+            
           </div>
-          <img  src="<?php echo get_template_directory_uri();?>/img/Équipe/equipe.jpg"  alt="">
-        </div>
-    </div>
+      </div>
   </div>
+
   <div class="equipe-container">
+    
     <div class="titre_equipe"><h2>Direction Générale</h2></div>
     <div class="equipe-content">
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Colleen" type="button"><img src="/sources/médias/Équipe/colleen thorpe.png" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Colleen" type="button"><p>Colleen Thorpe <br>Directrice Générale<br>conférencière</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Marie" type="button"><img src="/sources/médias/Équipe/1.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Marie" type="button"><p>Marie Normand <br>Conseillère et adjointe<br>à la direction générale</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Marilyne" type="button"><img src="/sources/médias/Équipe/Maryline Tremblay Coutu.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Marilyne" type="button"><p>Marilyne Tremblay Coutu <br>Conseillère et adjointe<br>à la direction générale</p></div>
-      </div>
+
+  <?php
+      $membres_arguments = array( // 👈 Tableau d'arguments
+        'post_type' => 'membre_equipe',
+        'order' => 'asc'
+      );
+  $membres = new WP_Query($membres_arguments);
+  while ($membres->have_posts()) : $membres->the_post(); 
+?>
+        <div class="flex-equipe">
+       <div class="img-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_post_thumbnail('large');?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('nom'); ?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('poste'); ?></div>
+        </div>
+        
+        
+        <?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
+
     </div>
+
     <div class="titre_equipe"><h2>Administration</h2></div>
     <div class="equipe-content-2">
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Nicole" type="button"><img src="/sources/médias/Équipe/nicole bergeron.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Nicole" type="button"><p>Nicole Bergeron <br>Directrice<br>Finances et administration</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Laurence" type="button"><img src="/sources/médias/Équipe/2.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Laurence" type="button"><p>Laurence Prost <br>Analyste comptable</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Patricia" type="button"><img src="/sources/médias/Équipe/patricia chourio.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Patricia" type="button"><p>Patricia Chourio <br>Technicienne comptable</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Boivin" type="button"><img src="/sources/médias/Équipe/3.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Boivin" type="button"><p>Patricia Boivin <br>Technicienne comptable</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Thibault" type="button"><img src="/sources/médias/Équipe/thibault gautier.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Thibault" type="button"><p>Thibault Gautier <br>Conseiller en ressources<br>humaines</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Phil" type="button"><img src="/sources/médias/Équipe/4.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Phil" type="button"><p>Philippe Mercier <br>Agent administratif<br>Ressources humaines et<br>régie interne</p></div>
-      </div>
-      <div class="flex-equipe">
-        <div class="img-equipe" data-bs-toggle="modal" data-bs-target="#Jeanne" type="button"><img src="/sources/médias/Équipe/5.jpg" alt=""></div>
-        <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="#Jeanne" type="button"><p>Jeanne Bilodeau <br>Agente administrative<br>Ressources humaines</p></div>
+
+    <?php
+      $membres_admin_arguments = array( // 👈 Tableau d'arguments
+        'post_type' => 'membre_equipe_admin',
+        'order' => 'asc'
+      );
+  $membres_admin = new WP_Query($membres_admin_arguments);
+  while ($membres_admin->have_posts()) : $membres_admin->the_post(); 
+?>
+        <div class="flex-equipe">
+       <div class="img-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_post_thumbnail('large');?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('nom'); ?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('poste'); ?></div>
+        </div>
+        
+        
+        <?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
       </div>
     </div>
   </div>
+      
 
 <!-- Modal -->
 <div class="modal fade" id="Colleen" tabindex="-1" aria-hidden="true">
@@ -283,21 +290,26 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
+    flex-wrap:nowrap;
 }
 .titre_equipe h2{
     font-size: 4vw;
     color: white;
     padding: 2%;
 }
-.img-equipe{
-    width: 20vw;
+.img-equipe img{
+    width: 100%;
     margin-left: 0.5vw;
+    height: 100%;
 }
 .txt-equipe{
     margin-left: 0.5vw;
-    font-size: 1.8vw;
+    font-size:1.8vw;
     color: white;
+    width: 100%;
 }
+
+
 		</style>
 <?php endwhile; // Fermeture de la boucle
 

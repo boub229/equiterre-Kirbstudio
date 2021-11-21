@@ -165,9 +165,9 @@ wp_reset_postdata();
 <section>
   <h1>Dons</h1>
   <div class="container-don">
-    <div class="btn-don">
-      <div class="text-don">Faites un don!</div>
-    </div>
+    <a class="btn-don" href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/?_ga=2.86176735.613308119.1637355142-258796891.1637355142" >
+      <div class="text-don" >Faites un don!</div>
+    </a>
   </div>
 </section>
 </article>
