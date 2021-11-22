@@ -93,8 +93,13 @@ get_header(); // Affiche header.php
   <section>
   <div class="bloc_services">
   <?php
-  
-  $services = new WP_Query('post_type=service');
+  $services_arguments = array( // 👈 Tableau d'arguments
+    'post_type' => 'service',
+    'posts_per_page' => 3,
+    'orderBy' => 'date',
+    'order' => 'asc'
+  );
+  $services = new WP_Query($services_arguments);
   while ($services->have_posts()) : $services->the_post(); 
 ?>
 <div class="service1">
