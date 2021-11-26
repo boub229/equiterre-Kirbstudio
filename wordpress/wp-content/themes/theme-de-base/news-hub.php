@@ -36,33 +36,20 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 
 
-<?php
-      $nouvelles_arguments = array( // 👈 Tableau d'arguments
-        'post_type' => 'nouvelle',
-        'posts_per_page' => 6,
-        'orderBy' => 'date',
-        'order' => 'asc'
-      );
-  $Nouvelles = new WP_Query($nouvelles_arguments);
-  while ($Nouvelles->have_posts()) : $Nouvelles->the_post(); 
-?>
 
 
-  <div class="cartes">
-    <div class="opacity_détail"></div>
-    <?php the_post_thumbnail('large', ['class' => 'img-nouvelles-détail']); // Vignette large du post ?>
-    <h2 class="titre_cartes" ><?php the_title(); ?></h2>
-  
-  
+
+
+
 </div>
 
 
-<?php endwhile; // Fermeture de la boucle
-wp_reset_postdata(); 
-?>
+<div class='btn_nouvelles'>
+
 
 <button class='bouton_nouvelles'>Voir plus de nouvelles</button>
 </div>
+
 </section>
 	</article>
 <?php endwhile; // Fermeture de la boucle
@@ -95,6 +82,53 @@ get_footer(); // Affiche footer.php
       background-color: #e23d77;
     }
 
+    .btn_nouvelles{
+      display:flex;
+      justify-content:center;
+    }
+
   
 
 </style>
+
+<script>
+ 
+fetch("/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc")
+
+.then(response => response.json())
+
+  .then(data => {console.log(data)
+
+      let html = "";
+
+      let fetchDivNouvelle = document.querySelector('.cartes_nouvelles')
+
+      for (let i = 0; i < 6; i++) {
+
+
+         let link = data[i].link;
+
+         let title = data[i].title.rendered;
+
+         let image = data[i]._embedded['wp:featuredmedia'][0].source_url;
+
+
+
+         html += 
+
+                `
+<div class='cartes'>
+  <div class="opacity_détail"></div>
+  <div class="titre_cartes"><h2>
+  ${title}</h2>
+  </div>
+  <img src="${image}"  class='img-nouvelles-détail' alt="">
+  <a href="${link}">
+</div>`;         
+         }
+    console.log(fetchDivNouvelle)
+    fetchDivNouvelle.innerHTML = html;
+
+      });
+  </script>
+
