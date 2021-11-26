@@ -1,6 +1,7 @@
 <?php 
 /**
  * 	Template Name: Services
+ * * Template Post Type: post, page, services
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -18,62 +19,43 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		
 		<?php the_content(); // Contenu principal de la page ?>
 		<section id='services'>
-  <div class="hero">
+    <div class="hero">
       <div class="fruit">
           <div class="image_nouvelle">
           <div class="opacity"></div>
             <div class="titre_nouvelle">
-              <h2>Services</h2>
+            <h2> <?php the_field('titre_des_pages'); ?> </h2>
             </div>
-            <img src="<?php echo get_template_directory_uri();?>/img/détail_services/1.jpg" alt="">
+            <img src="<?php the_field('img_hero'); ?>" alt="">
           </div>
       </div>
   </div>
+  <div class="cartes_services">
 
-<div class='cartes_services'>
-<div class='cartes2'>
-  <div class="opacity_détail1"></div>
-  <div class="titre_cartes1"><h2>
-    École ouverte</h2>
-  </div>
-  <img  src="<?php echo get_template_directory_uri();?>/img/détail_services/service1.png" class='img-nouvelles-détail' >
+  <?php
+      $services_arguments = array( // 👈 Tableau d'arguments
+        'post_type' => 'service',
+        'order' => 'asc'
+      );
+  $services = new WP_Query($services_arguments);
+  while ($services->have_posts()) : $services->the_post(); 
+?>
+
+
+
+        <div class="cartes2">
+        <div class="opacity_détail"></div>
+       <div class="titre_cartes"> <h2> <?php the_field('titre'); ?> </h2></div>
+       <div class="img-nouvelles-détail"> <?php the_post_thumbnail('large');?></div>
+        </div>
+        
+        
+        
+        <?php endwhile; // Fermeture de la boucle
+wp_reset_postdata(); 
+?>
 </div>
-<div class='cartes2'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    Paniers bio</h2>
-  </div>
-  <img src="/sources/médias/détail_services/service2.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes2'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    Épluche ta ville pour manger local</h2>
-  </div>
-  <img src="/sources/médias/détail_services/service3.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes2'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    Exigez local</h2>
-  </div>
-  <img src="/sources/médias/détail_services/service4.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes2'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>   
-    Travailler sur une ferme</h2>
-  </div>
-  <img src="/sources/médias/détail_services/service5.jpg"  class='img-nouvelles-détail' alt="">
-</div>
-<div class='cartes2'>
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-    Recettes</h2>
-  </div>
-  <img src="/sources/médias/détail_services/service6.png"  class='img-nouvelles-détail' alt="">
-</div>
-</div>
+
 
 </section>
 
@@ -82,9 +64,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 	</article>
 	<style>
-		.img-nouvelles-détail{
+		.img-nouvelles-détail img{
 			position: relative;
-
+      width: 100%;
+      height:100%;
 		}
 
 		.hero{

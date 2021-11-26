@@ -24,7 +24,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
           <div class="image_nouvelle">
           <div class="opacity"></div>
             <div class="titre_nouvelle">
-              <h2>Nouvelles</h2>
+            <h2> <?php the_field('titre_des_pages'); ?> </h2>
             </div>
             <img src="<?php the_field('img_hero'); ?>" alt="">
           </div>

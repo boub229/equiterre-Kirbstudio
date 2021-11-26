@@ -93,8 +93,13 @@ get_header(); // Affiche header.php
   <section>
   <div class="bloc_services">
   <?php
-  
-  $services = new WP_Query('post_type=service');
+  $services_arguments = array( // 👈 Tableau d'arguments
+    'post_type' => 'service',
+    'posts_per_page' => 3,
+    'orderBy' => 'date',
+    'order' => 'asc'
+  );
+  $services = new WP_Query($services_arguments);
   while ($services->have_posts()) : $services->the_post(); 
 ?>
 <div class="service1">
@@ -165,9 +170,9 @@ wp_reset_postdata();
 <section>
   <h1>Dons</h1>
   <div class="container-don">
-    <div class="btn-don">
-      <div class="text-don">Faites un don!</div>
-    </div>
+    <a class="btn-don" href="https://www.jedonneenligne.org/equiterre/FAIREUNDON/?_ga=2.86176735.613308119.1637355142-258796891.1637355142" >
+      <div class="text-don" >Faites un don!</div>
+    </a>
   </div>
 </section>
 </article>
