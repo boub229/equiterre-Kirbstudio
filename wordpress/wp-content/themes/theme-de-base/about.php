@@ -24,15 +24,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
           <div class="opacity"></div>
             <div class="titre_détail_nouvelle">
               <h2> <?php the_field('titre_des_pages'); ?> </h2>
-              <h3>Équiterre est un des principaux organismes environnementaux du Québec avec, en 2018 :</h3>
+              <h3><?php the_field('sous-titre_apropos'); ?> </h3>
               <div class="a-porpos-liste">
               <ul>
-                <li>130 000 sympathisants, 25 000 membres, 200 bénévoles, 23 stagiaires et 53 employés créatifs et dévoués</li>
-                <li>125 000 fans sur les réseaux sociaux</li>
-                <li>Plus d’un million d’utilisateurs uniques de son site web.</li>
-                <li>1 670 parutions médiatiques</li>
-                <li>450 demandes d’entrevues</li>
-                <li>40 rencontres de responsables politiques au provincial et 80 au fédéral.</li>
+                <?php the_field('liste_apropos'); ?>
               </ul> 
             </div>
             </div>
@@ -53,7 +48,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     
     <p> <?php the_field('composante_de_description_de_base_2'); ?> </p>
   </div>
-  <h3 class="titre-liste">Stratégie</h3>
+  <h3 class="titre-liste"><?php the_field('sous-titre_apropos2'); ?></h3>
   <div class="a-propos-content">
     
     <p> <?php the_field('composante_de_description_de_base_3'); ?> </p>
