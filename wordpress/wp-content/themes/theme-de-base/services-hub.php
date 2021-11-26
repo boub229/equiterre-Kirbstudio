@@ -32,28 +32,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   </div>
   <div class="cartes_services">
 
-  <?php
-      $services_arguments = array( // 👈 Tableau d'arguments
-        'post_type' => 'service',
-        'order' => 'asc'
-      );
-  $services = new WP_Query($services_arguments);
-  while ($services->have_posts()) : $services->the_post(); 
-?>
+ 
 
-
-
-        <div class="cartes2">
-        <div class="opacity_détail"></div>
-       <div class="titre_cartes"> <h2> <?php the_field('titre'); ?> </h2></div>
-       <div class="img-nouvelles-détail"> <?php the_post_thumbnail('large');?></div>
-        </div>
-        
-        
-        
-        <?php endwhile; // Fermeture de la boucle
-wp_reset_postdata(); 
-?>
+ 
 </div>
 
 
@@ -94,6 +75,47 @@ wp_reset_postdata();
     flex-wrap: wrap;
 }
 		</style>
+
+<script>
+ 
+ fetch("/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/service?_embed&orderby=date&order=asc")
+ 
+ .then(response => response.json())
+ 
+   .then(data => {console.log(data)
+ 
+       let html = "";
+ 
+       let fetchDivService = document.querySelector('.cartes_services')
+ 
+       for (let i = 0; i < 6; i++) {
+ 
+ 
+          let link = data[i].link;
+ 
+          let title = data[i].title.rendered;
+ 
+          let image = data[i]._embedded['wp:featuredmedia'][0].source_url;
+ 
+ 
+ 
+          html += 
+ 
+                 `
+ <div class='cartes2'>
+   <div class="opacity_détail"></div>
+   <div class="titre_cartes"><h2>
+   ${title}</h2>
+   </div>
+   <img src="${image}"  class='img-nouvelles-détail' alt="">
+   <a href="${link}">
+ </div>`;         
+          }
+     console.log(fetchDivService)
+     fetchDivService.innerHTML = html;
+ 
+       });
+   </script>
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
