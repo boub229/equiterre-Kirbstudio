@@ -110,14 +110,13 @@ fetch("/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/nouvelle?_embed&orderby=dat
          html += 
 
                 `
-<div class='cartes'>
+<a class='cartes' href="${link}">
   <div class="opacity_détail"></div>
   <div class="titre_cartes"><h2>
   ${title}</h2>
   </div>
   <img src="${image}"  class='img-nouvelles-détail' alt="">
-  <a href="${link}">
-</div>`;         
+</a>`;         
          }
     console.log(fetchDivNouvelle)
     fetchDivNouvelle.innerHTML = html;
