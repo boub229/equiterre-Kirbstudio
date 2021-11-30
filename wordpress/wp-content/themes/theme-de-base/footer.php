@@ -1,6 +1,8 @@
 <?php
 	/*-----------------------------------------------------------------------------------*/
 	/* Affiche le pied de page (Footer) sur toutes vos pages
+  * 	Template Name: Footer
+  * * Template Post Type: post, page, footer, partenaires
 	/*-----------------------------------------------------------------------------------*/
 
 // Fermeture de la zone de contenu principale ?>
@@ -11,12 +13,45 @@
       <div class="container-fluid">
           <div class="row">
               <div class="col-sm-6 col-xs-12 text-center text-sm-start colonne1">
-                <a class="logo-footer" href="index.html"><img src="<?php echo get_template_directory_uri();?>/medias/logo.PNG"></a>
+                <a class="logo-footer" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/medias/logo.PNG"></a>
                 <a class="reseau-footer" href="https://www.facebook.com/equiterre/"><img  class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/fb2.png"></a>
                 <a class="reseau-footer" href="https://www.instagram.com/equiterre_ong/?hl=fr-ca"><img  class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/insta2.png"></a>
                 <a class="reseau-footer" href="https://twitter.com/equiterre?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img class="reseaux_sociaux" src="<?php echo get_template_directory_uri();?>/medias/twitter2.png"></a>
-                <a class="partenaire-footer" href="https://www.vireauvert.org/"><img src="<?php echo get_template_directory_uri();?>/medias/partenaire1.png"></a>
-                <a class="partenaire2-footer" href="https://uneplaneteunvote.ca/"><img src="<?php echo get_template_directory_uri();?>/medias/partenaire2.png"></a>
+
+
+                <?php 
+                $partenaires = new WP_Query('post_type=partenaire');
+
+
+            while ($partenaires->have_posts()) : $partenaires->the_post();
+              ?>
+
+<a class="partenaire-footer" href="<?php the_field('liens_partenaires'); ?>"> <img src="<?php the_post_thumbnail('large'); // Vignette large du post ?>" ></a>
+
+
+            <?php endwhile; // Fermeture de la boucle
+            wp_reset_postdata(); 
+            ?>
+
+
+
+                <?php 
+                $partenaires2 = new WP_Query('post_type=partenaire2');
+
+
+            while ($partenaires2->have_posts()) : $partenaires2->the_post();
+              ?>
+
+<a class="partenaire2-footer" href="<?php the_field('liens_partenaires'); ?>" >
+ <img src="<?php the_post_thumbnail('large'); // Vignette large du post ?>">
+</a>
+
+
+            <?php endwhile; // Fermeture de la boucle
+            wp_reset_postdata(); 
+            ?>
+
+
                 <p class="copyright">© Équiterre KirbStudio</p>
               </div>
               <div class="col-sm-6 col-xs-12 text-center colonne2">
@@ -35,7 +70,19 @@
 </footer>
 <style>
 
+.colonne1 .partenaire2-footer{
+  position:absolute;
+  transform: scale(0.2);
+  height:425px;
 
+}
+
+.colonne1 a.partenaire2-footer{
+  height: 425px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 4;
+}
 </style>
 
 <?php wp_footer(); 
