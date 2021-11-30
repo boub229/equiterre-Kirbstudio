@@ -102,14 +102,16 @@ get_header(); // Affiche header.php
   $services = new WP_Query($services_arguments);
   while ($services->have_posts()) : $services->the_post(); 
 ?>
-<div class="service1">
-        
+
+<a  href="<?php the_field('liens'); ?>" class="service1">
+      
         <?php the_post_thumbnail('large'); // Vignette large du post ?>
         <div class="color-1">
         </div>
         <p class="text_cartes" ><?php the_title(); ?></p>
         
-      </div>
+</a>
+      
 
 <?php endwhile; // Fermeture de la boucle
 wp_reset_postdata(); 
@@ -153,8 +155,14 @@ wp_reset_postdata();
         
         <?php the_post_thumbnail('large'); // Vignette large du post ?>
         <p class="text-nouvelles" ><?php the_title(); ?></p>
+        <a href="<?php the_field('liens'); ?>">
         <button class="button-savoir-plus">En savoir plus</button>
-        </div>
+        </a>
+        
+       
+        
+        
+    </div>
      
 
 <?php endwhile; // Fermeture de la boucle
@@ -206,8 +214,11 @@ wp_reset_postdata();
     
 </style>
 
+
+
 <?php 
 
 get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>
+
