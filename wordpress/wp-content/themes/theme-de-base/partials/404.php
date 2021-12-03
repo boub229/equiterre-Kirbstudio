@@ -4,14 +4,9 @@
 get_header(); // Affiche header.php
 
 get_template_part( 'partials/404' ); // Affiche partials/404.php ?>
-<html>
-
-<head>
 
 
-  <title>Error 404</title>
-</head>
-<body>
+
     <div class="error">
         <div class="err_style">
             ERROR 404
@@ -21,9 +16,6 @@ get_template_part( 'partials/404' ); // Affiche partials/404.php ?>
       <a class='arbret2'href="https://imgur.com/7MRLzsD"><img src="https://i.imgur.com/7MRLzsD.png" title="source: imgur.com" /></a>
 
 
-</body>
-
-</html>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
