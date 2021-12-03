@@ -86,7 +86,7 @@ get_footer(); // Affiche footer.php
 
 <script>
 function bouton_news(nbr) {
-  fetch(`/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc&per_page=${nbr}`)
+  fetch(`./wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc&per_page=${nbr}`)
 
   .then(response => response.json())
 
