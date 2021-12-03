@@ -62,16 +62,6 @@ html, body{
 
 </style>
 
-<script>
-const animation = gsap.timeline({
-    defaults: { 
-      y: '400%',
-      ease: 'back'
-    }
-  })
-    .from('.arbret1', {})
-  .from('.arbret2', {})
-   ;
-    </script>
+
 		
 
