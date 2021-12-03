@@ -78,7 +78,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 <script>
  
- fetch("/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/service?_embed&orderby=date&order=asc")
+ fetch( <?php the_field('fetch'); ?> )
  
  .then(response => response.json())
  

@@ -40,7 +40,7 @@ html, body{
 }
 
 .arbret1{
-  overflow: hidden;
+  overflow:h idden;
   position:absolute;
   width: 100%;
   z-index: 2;
@@ -74,7 +74,7 @@ const animation = gsap.timeline({
   .from('.arbret1', { y: '400%', ease: 'back'})
 .from('.arbret2', { y: '400%', ease: 'back'})
  ;
- 
+
   </script>
 
 
