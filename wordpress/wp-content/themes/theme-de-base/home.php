@@ -216,11 +216,8 @@ wp_reset_postdata();
 
 
 
-<?php endwhile;
+<?php 
 
-else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/404' ); // Affiche partials/404.php
-endif;
 
 get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
