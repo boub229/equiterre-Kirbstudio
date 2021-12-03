@@ -56,6 +56,6 @@ const animation = gsap.timeline({
     ease: 'back'
   }
 })
-  .from('.arbret1', {})
-.from('.arbret2', {})
+  .from('.arbret1', { y: '400%', ease: 'back'})
+.from('.arbret2', { y: '400%', ease: 'back'})
  ;
