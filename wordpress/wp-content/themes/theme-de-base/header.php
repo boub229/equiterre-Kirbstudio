@@ -84,6 +84,13 @@ button{
 	font-size:14px;
 }
 
+.navbar-brand{
+	width:264px;
+	display: flex;
+	height: 130px;
+	padding: 30px;
+}
+
 
 
 @media screen and (max-width: 992px){}

@@ -83,6 +83,14 @@
   align-items: flex-end;
   z-index: 4;
 }
+
+.colonne1 a.reseau-footer{
+  max-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  width: 33%;
+  justify-content: center;
+}
 </style>
 
 <?php wp_footer(); 
