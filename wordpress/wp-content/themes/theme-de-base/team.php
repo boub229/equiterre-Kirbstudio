@@ -47,9 +47,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
   while ($membres->have_posts()) : $membres->the_post(); 
 ?>
         <div class="flex-equipe">
-       <div class="img-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_post_thumbnail('large');?></div>
-       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('nom'); ?></div>
-       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" type="button"> <?php the_field('poste'); ?></div>
+       <div class="img-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>"> <?php the_post_thumbnail('large');?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" > <?php the_field('nom'); ?></div>
+       <div class="txt-equipe" data-bs-toggle="modal" data-bs-target="<?php the_field('modal') ?>" > <?php the_field('poste'); ?></div>
         </div>
         
         
