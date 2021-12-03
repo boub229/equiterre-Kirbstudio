@@ -212,6 +212,15 @@ wp_reset_postdata();
     }
 
     
+    .img-nouvelles{
+      width: 375px;
+		}
+
+    .row>*{
+      padding-right: calc(var(--bs-gutter-x) * .0) !important; 
+     padding-left: calc(var(--bs-gutter-x) * .0) !important;
+    }
+
 </style>
 <script>
   const play = document.querySelector('.btn-don');
