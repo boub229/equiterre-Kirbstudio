@@ -89,7 +89,7 @@ button{
 }
 
 .navbar-brand{
-	width:264px;
+	width:250px;
 	display: flex;
 	height: 130px;
 	padding: 30px;
@@ -97,7 +97,7 @@ button{
 
 
 
-@media screen and (max-width: 992px){}
+@media screen and (max-width: 1045px){}
 .navbar-collapse { width:164px;
 
 }
