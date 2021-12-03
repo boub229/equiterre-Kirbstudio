@@ -285,8 +285,14 @@ wp_reset_postdata();
     margin-left: 0.5vw;
     font-size:1.8vw;
     color: white;
-    width: 100%;
+    width: 100%;   
 }
+
+.modal-content{
+  color: black;
+}
+
+
 
 
 		</style>
