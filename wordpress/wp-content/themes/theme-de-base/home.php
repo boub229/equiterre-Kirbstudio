@@ -216,7 +216,7 @@ wp_reset_postdata();
 
 
 
-<?php 
+<?php endwhile;
 
 else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
