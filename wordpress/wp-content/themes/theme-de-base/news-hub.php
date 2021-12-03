@@ -123,6 +123,10 @@ function bouton_news(nbr) {
 
         });
 } 
+let btn = document.querySelector('.bouton_nouvelles');
+btn.addEventListener("click", bouton_news){
+
+}
 
 bouton_news(6); 
 
