@@ -62,6 +62,21 @@ html, body{
 
 </style>
 
+<script>
+
+  
+const animation = gsap.timeline({
+  defaults: { 
+    y: '400%',
+    ease: 'back'
+  }
+})
+  .from('.arbret1', { y: '400%', ease: 'back'})
+.from('.arbret2', { y: '400%', ease: 'back'})
+ ;
+ 
+  </script>
+
 
 		
 
