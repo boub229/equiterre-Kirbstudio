@@ -1,6 +1,4 @@
-import * as Popper from '@popperjs/core';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+
 import './style.scss';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
