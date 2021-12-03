@@ -96,6 +96,10 @@ function bouton_news(nbr) {
 
         let fetchDivNouvelle = document.querySelector('.cartes_nouvelles')
 
+        if(nbr > data.length){
+          nbr = data.length;
+        }
+
         for (let i = 0; i < nbr; i++) {
 
 
