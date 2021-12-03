@@ -216,7 +216,7 @@ wp_reset_postdata();
       width: 375px;
 		}
 
-    .row{
+    .row>*{
       padding-right: calc(var(--bs-gutter-x) * .0) !important; 
      padding-left: calc(var(--bs-gutter-x) * .0) !important;
     }
