@@ -78,7 +78,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 <script>
  
- fetch( <?php the_field('fetch'); ?> )
+ fetch( "<?php the_field('fetch'); ?>" )
  
  .then(response => response.json())
  
