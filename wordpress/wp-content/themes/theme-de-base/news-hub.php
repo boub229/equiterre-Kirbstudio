@@ -85,42 +85,46 @@ get_footer(); // Affiche footer.php
 </style>
 
 <script>
- 
-fetch("/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc")
+function bouton_news(nbr) {
+  fetch(`/equiterre-Kirbstudio/wordpress/wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc&per_page=${nbr}`)
 
-.then(response => response.json())
+  .then(response => response.json())
 
-  .then(data => {console.log(data)
+    .then(data => {console.log(data)
 
-      let html = "";
+        let html = "";
 
-      let fetchDivNouvelle = document.querySelector('.cartes_nouvelles')
+        let fetchDivNouvelle = document.querySelector('.cartes_nouvelles')
 
-      for (let i = 0; i < 6; i++) {
-
-
-         let link = data[i].link;
-
-         let title = data[i].title.rendered;
-
-         let image = data[i]._embedded['wp:featuredmedia'][0].source_url;
+        for (let i = 0; i < nbr; i++) {
 
 
+           let link = data[i].link;
 
-         html += 
+           let title = data[i].title.rendered;
 
-                `
-<a class='cartes' href="${link}">
-  <div class="opacity_détail"></div>
-  <div class="titre_cartes"><h2>
-  ${title}</h2>
-  </div>
-  <img src="${image}"  class='img-nouvelles-détail' alt="">
-</a>`;         
-         }
-    console.log(fetchDivNouvelle)
-    fetchDivNouvelle.innerHTML = html;
+           let image = data[i]._embedded['wp:featuredmedia'][0].source_url;
 
-      });
-  </script>
+
+
+           html += 
+
+                  `
+  <a class='cartes' href="${link}">
+    <div class="opacity_détail"></div>
+    <div class="titre_cartes"><h2>
+    ${title}</h2>
+    </div>
+    <img src="${image}"  class='img-nouvelles-détail' alt="">
+  </a>`;         
+           }
+      console.log(fetchDivNouvelle)
+      fetchDivNouvelle.innerHTML = html;
+
+        });
+} 
+
+bouton_news(6); 
+
+    </script>
 
