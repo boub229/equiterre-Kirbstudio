@@ -85,6 +85,8 @@ get_footer(); // Affiche footer.php
 </style>
 
 <script>
+let btn_nouvelle = document.querySelector('.bouton_nouvelles')
+
 function bouton_news(nbr) {
   fetch(`/wp-json/wp/v2/nouvelle?_embed&orderby=date&order=asc&per_page=${nbr}`)
 
@@ -99,6 +101,8 @@ function bouton_news(nbr) {
         if(nbr > data.length){
           nbr = data.length;
         }
+
+        if (nbr > 12) btn_nouvelle.style.display = "none";
 
         for (let i = 0; i < nbr; i++) {
 
