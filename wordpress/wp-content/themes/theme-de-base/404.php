@@ -1,12 +1,14 @@
 <?php
-
+/**
+ * Modèle de la page 404
+ */
 
 get_header(); // Affiche header.php
 
 get_template_part( 'partials/404' ); // Affiche partials/404.php ?>
 
 
-
+test test test
     <div class="error">
         <div class="err_style">
             ERROR 404
